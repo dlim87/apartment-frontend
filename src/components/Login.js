@@ -34,16 +34,13 @@ class Login extends Component {
     console.log(e);
     this.Auth.login(this.state)
     .then(json => {
-     console.log("handling any errors");
-     if(json.errors) {
-       this.setState({
-         errors: json.errors
-       })
-     }
-     return json
-   })
+       console.log("handling any errors");
+       if(json.errors) {
+         this.setState({errors: json.errors})
+       }
+       return json
+     })
      .then(json => {
-       console.log(this.state.loggedIn, this.state.errors)
         if(this.Auth.loggedIn()) this.setState({loggedIn: true})
      })
   }
