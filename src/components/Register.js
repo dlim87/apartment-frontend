@@ -84,7 +84,7 @@ class Register extends Component {
        }
        return json
      })
-     .then(json => {
+     .then(resp => {
         if(this.Auth.loggedIn()) this.setState({success: true})
      })
   }

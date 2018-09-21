@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './components/Login'
 import Register from './components/Register'
 import ApartmentList from './components/ApartmentList'
+import CreateApartment from './components/CreateApartment'
 
 ReactDOM.render(
   <Router>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />
       <Route exact path='/apartments' component={ApartmentList} />
+      <Route exact path='/new' component={CreateApartment} />
     </div>
   </Router>
 , document.getElementById('root'));
