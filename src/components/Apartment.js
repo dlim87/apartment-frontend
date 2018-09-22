@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import Api from '../services/api'
-import '../css/ApartmentList.css'
+// import '../css/ApartmentList.css'
 import AuthService from '../services/AuthService'
 
-class ApartmentList extends Component {
+class Apartment extends Component {
   constructor(props){
     super(props)
     this.api = new Api()
@@ -24,15 +24,13 @@ class ApartmentList extends Component {
     }
   }
   render(){
-    console.log(this.state.userid);
+    console.log(this.props.match.url.substring(this.props.match.url.lastIndexOf('/')+1))
+    // console.log(this.state.userid);
     return(
-      <div className="apartmentList">
-      {this.state.apartments.map((e,index)=>{
-        return ( <ApartmentCard apartment=e userid={this.state.userid}/>
-        )
-      })}
-    </div>
+      <div className="apartment">
+      This is an apartment!
+      </div>
     )
   }
 }
-export default ApartmentList
+export default Apartment

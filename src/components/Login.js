@@ -74,7 +74,7 @@ class Login extends Component {
               type="submit"
             />
           </form>
-          {this.state.loggedIn && <Redirect to="/" />}
+          {this.state.loggedIn && <Redirect to="/apartments" />}
         </div>
       </div>
     );

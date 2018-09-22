@@ -8,6 +8,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import ApartmentList from './components/ApartmentList'
 import CreateApartment from './components/CreateApartment'
+import Apartment from './components/Apartment'
 
 ReactDOM.render(
   <Router>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path='/' component={App} />
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />
+      <Route path="/apartments/:id" component={Apartment} />
       <Route exact path='/apartments' component={ApartmentList} />
       <Route exact path='/new' component={CreateApartment} />
     </div>
