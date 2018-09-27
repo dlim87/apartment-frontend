@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Api from '../services/api'
 import '../css/ApartmentList.css'
 import AuthService from '../services/AuthService'
+import ApartmentCard from './ApartmentCard'
 
 class ApartmentList extends Component {
   constructor(props){
@@ -28,7 +29,7 @@ class ApartmentList extends Component {
     return(
       <div className="apartmentList">
       {this.state.apartments.map((e,index)=>{
-        return ( <ApartmentCard apartment=e userid={this.state.userid}/>
+        return ( <ApartmentCard apartment={e} userid={this.state.userid} key={e.id}/>
         )
       })}
     </div>

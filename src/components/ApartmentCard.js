@@ -9,7 +9,7 @@ class ApartmentCard extends Component{
         <p>{apartment.city}, {apartment.state} {apartment.post_code}</p>
         <p>{apartment.manager_name}<br/>
         {apartment.manager_number}-{apartment.manager_time}</p>
-        {(apartment.user_id==this.props.userid)? <div className="loggedInFunctions">
+        {(apartment.user_id===this.props.userid)? <div className="loggedInFunctions">
         <p>✎edit</p>
         <p>X delete</p>
         </div>: <p></p>}
